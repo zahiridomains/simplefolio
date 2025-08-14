@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    # Set the deployment path - replace 'username' with your cPanel username
+    - export DEPLOYPATH=/home/fnelhuxtks/public_html/
+    
+    # Copy all files from the repository to the public directory
+    - /bin/cp -r * $DEPLOYPATH
+    
+    # Copy hidden files (except .git and .cpanel.yml)
+    - /bin/cp -r .[^.]* $DEPLOYPATH 2>/dev/null || :
+    
+    # Set proper permissions for files and directories
+    - find $DEPLOYPATH -type f -exec chmod 644 {} \;
+    - find $DEPLOYPATH -type d -exec chmod 755 {} \;

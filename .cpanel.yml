@@ -3,8 +3,12 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/fnelhuxtks/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp favicon.*.png $DEPLOYPATH
     - /bin/cp index.*.js $DEPLOYPATH
+    - /bin/cp index.*.js.map $DEPLOYPATH
     - /bin/cp index.*.css $DEPLOYPATH
-    - /bin/cp *.png $DEPLOYPATH
-    - /bin/cp *.jpg $DEPLOYPATH
-    - /bin/cp *.map $DEPLOYPATH
+    - /bin/cp index.*.css.map $DEPLOYPATH
+    - /bin/cp acquisition.*.png $DEPLOYPATH
+    - /bin/cp profile.*.jpg $DEPLOYPATH
+    - /bin/cp sell.*.png $DEPLOYPATH
+    - /bin/cp stealth.*.png $DEPLOYPATH

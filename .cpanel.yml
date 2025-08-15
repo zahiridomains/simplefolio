@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/fnelhuxtks/public_html/
+    - export DEPLOYPATH=/home/fnelhuxtks/zahiridomains.com/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp favicon.*.png $DEPLOYPATH
     - /bin/cp index.*.js $DEPLOYPATH
